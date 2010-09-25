@@ -18,8 +18,8 @@ GetOptions('help' => \$help);
 
 if ( $help )
 {
-  print "Network quick scanner\n";
-  print "nqscan [--help|--force-send|--config=<config-file>|--progress]\n";
+  print "Quick Network scanner\n";
+  print "qnscan.pl [--help|--force-send|--config=<config-file>|--progress]\n";
 }
 else
 {
@@ -31,7 +31,7 @@ else
 
   # When the option force-send is specified, the report will be sent anyway, even if there is no warning
   $send = $send ? 1 : 0;
-  $configPath = '/etc/nqscan/config.ini' if !$configPath;
+  $configPath = '/etc/qnscan/qnscan.ini' if !$configPath;
 
   # check if the file exists
   die "Config file is not existing ($configPath)" if ! -e $configPath; 
@@ -90,7 +90,7 @@ sub ScanNetwork
 
       if ( $timedOut == 1 )
       {
-        $status = "Port Closed ot timeout.";
+        $status = "Port Closed or timeout.";
       }
       else
       {
@@ -143,7 +143,7 @@ sub SendEmail
   my $to = $config->{'To'};
   my $smtpServer = $config->{'SmtpServer'};
 
-  my $subject = "Network Quick Scan report";
+  my $subject = "Quick Network Scan report";
   my $fullReport = "This is a network scan report from your network administrator.\n\n";
   $fullReport .= "One or more warning have been found:\n$warnings\n\n" if $warnings ne '';
   

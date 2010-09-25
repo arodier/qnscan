@@ -1,0 +1,15 @@
+Quick Network Scanner
+==============================================================================
+Presentation & Goals:
+This is a simple perl script to scan a whole network for common
+misconfiguration errors on servers.
+
+- FTP: check if anonymous access is enabled
+- SSH: check if password access is enabled (not yet implemented)
+
+Manual installation:
+Create a folder /etc/qnscan, and copy the file qnscan.ini in it
+Customise the config file according to your needs. It's self documented.
+
+
+

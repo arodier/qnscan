@@ -27,7 +27,7 @@ else
   my $configPath;
   my $printProgress;
 
-  GetOptions('force-send' => \$send, 'config=s' => \$configPath, 'print-progress' => \$printProgress);
+  GetOptions('force-send' => \$send, 'config=s' => \$configPath, 'progress' => \$printProgress);
 
   # When the option force-send is specified, the report will be sent anyway, even if there is no warning
   $send = $send ? 1 : 0;

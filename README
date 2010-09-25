@@ -7,6 +7,9 @@ misconfiguration errors on servers.
 - FTP: check if anonymous access is enabled
 - SSH: check if password access is enabled (not yet implemented)
 
+Dependancies
+libnet-perl, libnet-ip-perl, libmime-lite-perl
+
 Manual installation:
 Create a folder /etc/qnscan, and copy the file qnscan.ini in it
 Customise the config file according to your needs. It's self documented.
